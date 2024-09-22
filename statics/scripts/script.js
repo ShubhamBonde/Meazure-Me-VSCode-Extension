@@ -83,7 +83,7 @@ class Timer {
 
             // Update the time in the display container
             updateTime();
-        }, 1);
+        }, 1000);
     }
 
     stopTimer() {
