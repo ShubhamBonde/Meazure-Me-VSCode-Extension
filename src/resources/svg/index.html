@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../statics/style.css">
+    <script src="../../../statics/scripts/script.js" defer></script>
+</head>
+
+<body>
+    <div id="project-details-display-cntr" class="project-display-cntr no-display">
+        <div class="project-name-dipslay">
+            <h1 class="project-name-dipslay-header">Active Project</h1>
+            <table class="project-details-display">
+                <tbody>
+                    <tr class="project-name-diplay-row">
+                        <td class="project-details-table-header">Project Name</td>
+                        <td id="project-name-display-cell">Creating VSCode extension</td>
+                    </tr>
+                    <tr class="project-task-diplay-row">
+                        <td class="project-details-table-header">Task</td>
+                        <td id="project-task-display-cell">Styling UI</td>
+                    </tr>
+                    <tr class="project-task-diplay-row">
+                        <td class="project-details-table-header">Task Description</td>
+                        <td id="project-task-description-display-cell">Make the UI look beautiful</td>
+                    </tr>
+                    <tr class="project-ellapsed-time-display-row">
+                        <td class="project-details-table-header">Ellapsed Time</td>
+                        <td id="project-ellapsed-time-display-cell">00:12:45</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="display-button-options">
+                <button class="tracking-trigger-button pause-button" id="puase-tracking-button" onclick="handlePauseClick()" title="Pause Project">
+                    <img src="../../../media/svg/pause_icon.svg" width="32px" height="32px">
+                </button>
+                <button class="tracking-trigger-button resume-button no-display" id="resume-tracking-button" onclick="handleResumeClick()" title="Resume Project">
+                    <img src="../../../media/svg/play_icon.svg" width="32px" height="32px">
+                </button>
+                <button class="tracking-trigger-button stop-button" id="stop-tracking-button" onclick="handleStopClick()" title="Stop Project">
+                    <img src="../../../media/svg/stop_icon.svg" width="32px" height="32px">
+                </button>
+            </div>
+            <div class="extender"></div>
+        </div>
+    </div>
+    <div id="project-details-form" class="main-container">
+        <span class="form-name-header">
+            <center>
+                <h1>Activity Tracker</h1>
+            </center>
+        </span>
+        <form method="dialog">
+            <div class="tracker-form-container">
+                <!-- Project name input control -->
+                <div class="input-control project-name-input-control">
+                    <label for="project-name">Project Name</label><br>
+                    
+                    <input type="text" id="project-name" maxlength="50" placeholder="Enter Project Name" autofocus required></input>
+                </div>
+
+                <!-- Project task input control -->
+                <div class="input-control project-task-input-control">
+                    <label for="project-task">Task</label><br>
+                    <input type="text" id="project-task" maxlength="100" placeholder="Enter Task" required></input>
+                </div>
+
+                <!-- Project description input control -->
+                <div class="input-control project-task-description-input-control">
+                    <label for="task-description">Description</label><br>
+                    <textarea id="task-description" maxlength="250" placeholder="Enter Description (Optional)"></textarea>
+                </div>
+
+                <div class="input-control tracker-button-group">
+                    <button class="tracking-trigger-button start-button" id="start-tracking-button"
+                        onclick="handleProjectStart()">Start</button>
+                </div>
+                <span class="tracking-timer" id="tracking-ellapsed-time-display"></span>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>`
